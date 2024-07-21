@@ -12,13 +12,14 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            /* 其他样式 */
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column; /* 改为垂直排列，以便容纳页脚 */
-            min-height: 100vh; /* 确保body至少与视口一样高 */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         
         h1 {
@@ -28,16 +29,6 @@
             border: 2px solid #333;
             padding: 20px;
             border-radius: 5px;
-            margin-top: auto; /* 让标题靠上，留出空间给页脚 */
-        }
-
-        footer {
-            /* 页脚样式 */
-            background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 0.9em;
         }
     </style>
 </head>
@@ -45,6 +36,6 @@
     <h1>Hello World</h1>
     <footer>
         That’s one small step for [a] man, one giant leap for mankind.
-    </footer>
+    <footer>
 </body>
 </html>
