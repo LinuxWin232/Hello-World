@@ -3,45 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Background</title>
+    <title>Hello World with CSS</title>
     <style>
         body {
-            /* 设置默认的背景颜色，以防图片未加载成功 */
-            background-color: #f0f0f0;
-            /* 其他可能的样式，如字体和边距 */
+            /* 设置背景图片 */
+            background-image: url('https://sourcebucket.s3.bitiful.net/img/default_cover_127.webp');
+            /* 为了确保图片覆盖整个屏幕 */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 3em;
+            text-align: center;
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-
-    <!-- 网页的内容区域 -->
-    <h1>Hello World</h1>
-    <p>“That’s one small step for [a] man, one giant leap for mankind.”</p>
-
-    <script>
-        // 图片数组，包含所有可用的背景图片路径
-        const backgrounds = [
-            'https://sourcebucket.s3.bitiful.net/img/default_cover_127.webp',
-            'https://sourcebucket.s3.bitiful.net/img/default_cover_14.webp',
-            'https://fluid.s3.bitiful.net/bg/dojm2h.png?w=1920&q=100&fmt=webp',
-            // 更多图片...
-        ];
-
-        // 选择随机图片的函数
-        function setRandomBackground() {
-            const randomIndex = Math.floor(Math.random() * backgrounds.length);
-            document.body.style.backgroundImage = `url(${backgrounds[randomIndex]})`;
-            document.body.style.backgroundSize = 'cover';
-            document.body.style.backgroundPosition = 'center';
-            document.body.style.backgroundRepeat = 'no-repeat';
-        }
-
-        // 页面加载时调用函数
-        window.addEventListener('load', setRandomBackground);
-    </script>
-
+    <h1>Hello World<br>“That’s one small step for [a] man, one giant leap for mankind.”</h1>
 </body>
 </html>
