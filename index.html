@@ -13,13 +13,11 @@
             background-position: center;
             background-repeat: no-repeat;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            flex-direction: column; /* 改为垂直排列，以便容纳简介区 */
+            min-height: 100vh; /* 确保body至少与视口一样高 */
         }
         
         h1 {
@@ -30,21 +28,22 @@
             padding: 20px;
             border-radius: 5px;
         }
-
-        footer {
-            /* 页脚样式 */
-            background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-            color: white;
+        
+        section.about {
+            /* 简介区样式 */
+            background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+            padding: 20px;
             text-align: center;
-            padding: 10px 0;
             font-size: 0.9em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: auto; /* 确保简介区紧贴底部 */
         }
     </style>
 </head>
 <body>
     <h1>Hello World</h1>
-    <footer>
-        That’s one small step for [a] man, one giant leap for mankind.
-    <footer>
+    <section>
+        <p>“That’s one small step for [a] man, one giant leap for mankind.”</p>
+    </section>
 </body>
 </html>
